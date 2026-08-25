@@ -1,0 +1,209 @@
+/* =========================
+   IMAGEM DA ORAÇÃO
+========================= */
+
+.oracao{
+    width: min(900px, 92%);
+    margin: auto;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.imagem-oracao{
+    width: 240px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 30px auto 45px;
+    border: 12px solid var(--cor-branco);
+    box-shadow:0 5px 18px rgba(90,31,40,.12);
+    transition:.4s ease;
+}
+
+.imagem-oracao:hover{
+    transform:scale(1.03);
+}
+
+.imagem-oracao{
+    animation: aparecer .8s ease;
+}
+
+/* =========================
+   CARD DA ORAÇÃO
+========================= */
+
+.card-oracao{
+
+    background: var(--cor-creme);
+
+    width: min(800px, 100%);
+
+    margin: auto;
+
+    padding: clamp(30px, 5vw, 55px);
+
+    border-radius: 25px;
+
+    border: 1px solid var(--cor-borda);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    animation: aparecer 1s ease;
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.9),
+        var(--cor-creme)
+    );
+    transition:.3s ease;
+}
+
+.card-oracao:hover{
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+
+.simbolo{
+    color:var(--cor-primaria);
+    font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.card-oracao h2{
+
+    font-family: var(--fonte-titulo);
+
+    font-size: clamp(2.2rem,4vw,3.5rem);
+
+    font-weight:400;
+
+    color: var(--cor-primaria);
+
+    margin-bottom:35px;
+
+}
+
+/* =========================
+   TEXTO DA ORAÇÃO
+========================= */
+
+.card-oracao p{
+
+    color: var(--cor-texto);
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+    text-align:justify;
+
+    margin-bottom:30px;
+
+}
+
+
+/* =========================
+   AMÉM
+========================= */
+
+.amem{
+
+    text-align:center !important;
+
+    color:var(--cor-primaria) !important;
+
+    font-size:1.3rem !important;
+
+    margin-top:40px;
+
+}
+
+.amem::before{
+    content:"";
+    display:block;
+    width:60px;
+    height:1px;
+    background:var(--cor-borda);
+    margin:0 auto 25px;
+}
+
+
+/* =========================
+   VERSÍCULO
+========================= */
+
+/* .versiculo{
+
+    width:min(700px,90%);
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+    color:var(--cor-secundaria);
+
+}
+
+
+.versiculo blockquote{
+
+    font-family:var(--fonte-titulo);
+    font-size:clamp(1.8rem,4vw,2.5rem);
+    line-height:1.4;
+}
+
+.versiculo p{
+
+    margin-top:15px;
+
+    font-weight:600;
+
+} */
+
+@media(max-width:600px){
+
+    .card-oracao{
+        border-radius:20px;
+        padding:30px 22px;
+    }
+
+
+    .card-oracao p{
+        text-align:left;
+        line-height: 1.8;
+        font-size:.98rem;
+    }
+
+    .card-oracao h2{
+        margin-bottom:25px;
+    }
+
+    .imagem-oracao{
+        width:160px;
+    }
+
+}
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+::selection{
+
+    background:#5a1f28;
+
+    color:white;
+}

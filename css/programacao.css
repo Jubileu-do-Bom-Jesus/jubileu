@@ -1,0 +1,235 @@
+main{
+
+    width:min(1000px,92%);
+
+    margin:auto;
+    padding-top:10px;
+
+    padding-bottom: 80px;
+}
+
+.introducao{
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.introducao h2{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+    color:var(--cor-primaria);
+}
+
+.introducao p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--cor-secundaria);
+
+    line-height:1.8;
+}
+
+/*=========================
+  PROGRAMAÇÃO
+=========================*/
+
+.programacao{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+/*=========================
+  CARD DO DIA
+=========================*/
+
+.dia{
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    transition: box-shadow .25s ease;
+}
+
+.dia:not([open]) summary:hover{
+    background: var(--cor-hover);
+    border-radius:20px;
+}
+
+.dia[open] summary:hover{
+    background: var(--cor-hover);
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
+}
+
+summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:26px 30px;
+
+    transition: background .25s ease;
+}
+
+summary:hover{
+
+    background:var(--cor-hover);
+
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+summary:focus-visible{
+
+    outline:2px solid var(--cor-primaria);
+
+    outline-offset:4px;
+}
+
+.cabecalho-dia{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+}
+
+.data{
+    font-size:1.45rem;
+    font-weight:700;
+    color:var(--cor-primaria);
+}
+
+.tema{
+    margin-top:4px;
+    color: var(--cor-texto-suave);
+    font-size:.95rem;
+}
+
+.conteudo{
+    padding:22px 30px 30px;
+
+    border-top:1px solid var(--cor-borda);
+}
+
+.eventos{
+
+    list-style:none;
+
+    margin-top:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.hora{
+    display:inline-block;
+
+    min-width:85px;
+
+    color:var(--cor-primaria);
+
+    font-weight:700;
+}
+
+.eventos li{
+
+    line-height:1.8;
+
+    color:var(--cor-texto);
+}
+
+.liturgia{
+
+    margin-top:8px;
+
+    margin-left:75px;
+
+    color: var(--cor-texto-suave);
+
+    font-size:.92rem;
+
+    font-style:italic;
+}
+
+.dia[open]{
+    box-shadow: 0 10px 22px rgba(0,0,0,.10);
+}
+
+/*=========================
+  SETA DO DETAILS
+=========================*/
+
+summary::after{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:32px;
+    height:32px;
+    transition:.3s;
+    content:"▾";
+    font-size:1.8rem;
+    color:var(--cor-primaria);
+}
+
+.dia[open] summary::after{
+
+    transform:rotate(180deg);
+}
+
+
+
+
+
+@media (max-width:600px){
+
+    summary,
+    .conteudo{
+
+        padding:20px;
+    }
+
+    .hora {
+        min-width: 40px;
+    }
+
+    .liturgia {
+        margin-left: 54px;
+        margin-top: 4px;
+    }
+
+    .eventos {
+        gap: 70px;
+    }
+
+    .introducao{
+
+        margin-bottom:40px;
+    }
+}
+
+::selection{
+
+    background:#5a1f28;
+
+    color:white;
+}

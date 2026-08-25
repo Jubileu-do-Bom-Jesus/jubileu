@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+/* ===========================
+   GLOBAIS
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal: #efe8df;
+  --cor-letras: #5a1f28;
+  --cor-texto-suave:#7b6257;
+  --cor-borda:#d7c9bc;
+
+  --fonte-principal: "Allura", cursive;
+}
+
+body {
+  background-color: var(--cor-principal);
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+  width: 100%;
+  height: clamp(400px, 100vw, 800px);
+
+  background-image: url(../imagens/imagens-fundo/bom-jesus.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: -20px;
+}
+
+@media (min-width: 42em) {
+  header {
+    background-image: url(../imagens/imagens-fundo/bom-jesus-desktop.png);
+    background-position-y: -38px;
+    height: clamp(500px, 54vw, 750px);
+  }
+}
+
+@media (min-width: 90em) {
+  header {
+    background-position-y: -66px;
+  }
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main {
+  position: relative;
+
+  margin-top: -105px;
+  padding-top: 120px;
+
+  text-align: center;
+
+  background: var(--cor-principal);
+
+  border-top-left-radius: 50% 80px;
+  border-top-right-radius: 50% 80px;
+}
+
+@media (min-width: 90em) {
+  main {
+    border-top-left-radius: 50% 120px;
+    border-top-right-radius: 50% 120px;
+  }
+}
+
+/* ===========================
+   IMAGEM CIRCULAR
+=========================== */
+
+main .circular {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 202px;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  border: 13px solid var(--cor-principal);
+  border-radius: 50%;
+
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.18);
+}
+
+/* ===========================
+   TIPOGRAFIA
+=========================== */
+
+main h1,
+main nav {
+  font-family: var(--fonte-principal);
+}
+
+main h1 {
+  color: var(--cor-letras);
+
+  font-size: clamp(3.2rem, 6vw, 7rem);
+
+  line-height: 1.1;
+
+  padding-bottom: 64px;
+}
+
+/* ===========================
+   NAVEGAÇÃO
+=========================== */
+
+main nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  gap: 40px;
+
+  padding: 0 16px 50px;
+
+  font-size: clamp(2rem, 1.8vw, 3rem);
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: min(90vw, 700px);
+
+  padding: 18px 20px;
+
+  text-decoration: none;
+
+  color: var(--cor-letras);
+  background: #fff;
+
+  border: 1px solid var(--cor-letras);
+  border-radius: 999px;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background-color .3s ease;
+}
+
+nav a:hover {
+  transform: translateY(-2px) scale(1.02);
+
+  background-color: #fffdfb;
+
+  box-shadow: 0 6px 14px rgba(90, 31, 40, 0.15);
+}
+
+footer{
+
+    margin-top:100px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    color: var(--cor-texto-suave);
+
+    font-size:.95rem;
+
+    border-top:1px solid var(--cor-borda);
+}
+
+::selection{
+
+    background:#5a1f28;
+
+    color:white;
+}
