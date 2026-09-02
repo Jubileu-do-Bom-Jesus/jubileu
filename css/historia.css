@@ -1,0 +1,290 @@
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: min(900px, 92%);
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+.introducao {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.introducao h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 400;
+    color: var(--cor-primaria);
+    line-height: 1.1;
+}
+
+.introducao h3 {
+    margin-top: 15px;
+    color: var(--cor-secundaria);
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    font-weight: 500;
+}
+
+.introducao p {
+    max-width: 720px;
+    margin: 25px auto 0;
+    color: var(--cor-texto);
+    line-height: 1.9;
+}
+
+
+/* =========================
+   HISTÓRIA
+========================= */
+
+.historia {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+
+/* =========================
+   CAPÍTULOS
+========================= */
+
+.capitulo {
+    padding: 0 10px 70px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.capitulo:last-child {
+    border-bottom: none;
+}
+
+
+/* =========================
+   TÍTULOS DOS CAPÍTULOS
+========================= */
+
+.capitulo h2 {
+    font-family: var(--fonte-texto);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    color: var(--cor-primaria);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.capitulo p {
+    max-width: 780px;
+    color: var(--cor-texto);
+    font-size: 1.05rem;
+    line-height: 2;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   DESTAQUES
+========================= */
+
+.destaque {
+    color: var(--cor-primaria) !important;
+    font-weight: 600;
+}
+
+
+/* =========================
+   FRASES ESPECIAIS
+========================= */
+
+.frase {
+    max-width: 650px !important;
+    margin: 45px auto !important;
+
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem !important;
+    font-weight: 400;
+    line-height: 1.4 !important;
+
+    color: var(--cor-primaria) !important;
+    text-align: center;
+}
+
+
+/* =========================
+   TRECHO ESPECIAL
+========================= */
+
+.destaques {
+    max-width: 650px !important;
+    margin: 35px auto !important;
+
+    text-align: center;
+
+    color: var(--cor-primaria) !important;
+
+    font-size: 1.2rem !important;
+    font-weight: 500;
+    line-height: 2 !important;
+}
+
+
+/* =========================
+   MARCO DE 1931
+========================= */
+
+.marco {
+    text-align: center;
+
+    padding: 55px 35px;
+
+    background: var(--cor-branco);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 28px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+}
+
+.marco h2 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.marco p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   LISTA POÉTICA
+========================= */
+
+.lista-poetica {
+    text-align: center;
+
+    color: var(--cor-primaria) !important;
+
+    font-size: 1.15rem !important;
+    font-weight: 500;
+
+    line-height: 2 !important;
+}
+
+
+/* =========================
+   ENCERRAMENTO
+========================= */
+
+.encerramento {
+    text-align: center;
+    border-bottom: none;
+}
+
+.encerramento h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 400;
+}
+
+.encerramento p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    max-width: 700px;
+    margin: 55px auto 0;
+    padding: 35px 20px;
+
+    border-top: 1px solid var(--cor-borda);
+}
+
+.final p {
+    margin: 8px 0;
+
+    color: var(--cor-primaria);
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+        padding-bottom: 70px;
+    }
+
+    .introducao {
+        margin-bottom: 60px;
+    }
+
+    .historia {
+        gap: 50px;
+    }
+
+    .capitulo {
+        padding: 0 0 50px;
+    }
+
+    .capitulo p {
+        font-size: .98rem;
+        line-height: 1.9;
+    }
+
+    .frase {
+        font-size: 2.1rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .destaques {
+        font-size: 1.05rem !important;
+        line-height: 1.9 !important;
+    }
+
+    .marco {
+        padding: 40px 20px;
+        border-radius: 22px;
+    }
+
+    .lista-poetica {
+        font-size: 1.05rem !important;
+        line-height: 1.9 !important;
+    }
+
+    .encerramento h2 {
+        font-size: 4rem;
+    }
+
+    .final {
+        margin-top: 40px;
+        padding: 30px 10px;
+    }
+
+    .final p {
+        font-size: 1.05rem;
+    }
+}

@@ -56,6 +56,10 @@ main{
     transition: box-shadow .25s ease;
 }
 
+.dia-final{
+    border-color: var(--cor-primaria);
+}
+
 .dia:not([open]) summary:hover{
     background: var(--cor-hover);
     border-radius:20px;
